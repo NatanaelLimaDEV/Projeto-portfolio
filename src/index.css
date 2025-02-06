@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+}
+
+:root{
+    --cor-texto-principal: #F3F4F6;
+    --cor-texto: #9CA3AF;
+    --cor-fundo: #122c3e;
+    --cor-secundaria: #7FFFD4;
+    --cor-background: #00010E;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--cor-background);
+    color: var(--cor-texto-principal);
+}
