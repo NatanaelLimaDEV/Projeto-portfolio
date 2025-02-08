@@ -1,7 +1,7 @@
 /* Cabeçalho */
 .cabecalho {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     height: 100dvh;
@@ -9,22 +9,24 @@
 }
 
 .titulo-cabecalho {
+    height: 90dvh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .titulo-cabecalho > div > h1 {
-    font-size: 90px;
+    font-size: 50px;
 }
 
 .titulo-cabecalho > div > h3 {
-    font-size: 40px;
+    font-size: 22px;
     color: var(--cor-texto);
 }
 
 .bv-cabecalho {
-   font-size: 25px;
+   font-size: 18px;
 }
 
 .icones-cabecalho, .titulo-sm-conteudo, .titulo-sm-rodape {
@@ -33,24 +35,38 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    font-size: 24px;
 }
 
+.icones-cabecalho {
+    gap: 20px;
+}
 
 .icon, .icon-contato {
     transition: transform 0.1s ease-in-out;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .icon:hover{
-    transform: scale(1.1);
     color: var(--cor-secundaria);
+}
+
+.centro-cabecalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .img-cabecalho > img {
     width: 400px;
+    display: none;
 }
 
+.img-cabecalho-mobile > img {
+    width: 300px;
+    margin-bottom: 40px;
+}
 
 
 
@@ -58,22 +74,28 @@
 .conteudo {
     display: flex;
     flex-direction: column;
+    margin-bottom: 200px;
 }
 
 .sm-conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
-    height: 100dvh;
+    height: 50dvh;
+    gap: 80px;
+    margin-bottom: 200px;
 }
 
 .titulo-sm-conteudo{
     gap: 20px;
+    align-self: flex-start;
+    margin-left: 20px;
 }
 
 .text-conteudo {
+    text-indent: 30px;
     width: 80%;
     font-size: 25px;
     color: var(--cor-texto);
@@ -84,27 +106,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 180px;
+    gap: 80px;
 }
 
 .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
     max-width: 80%;
-    gap: 80px;
+    gap: 20px;
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .card > a > img {
-    width: 600px;
+    width: 100%;
     border-radius: 20px;
-    border: 2px solid var(--cor-fundo);
+    border: 2px solid var(--cor-fundo-secundaria);
     transition: transform 0.3s ease-in-out;
 }
 
 .card > a > img:hover {
     border-color: var(--cor-secundaria);
-    transform: scale(1.1);
 }
 
 .card-info {
@@ -122,7 +147,7 @@
 }
 
 .card-text-info > div > h3 {
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .titulo-link-card {
@@ -154,13 +179,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
 }
 
 .card-tecnologias > p {
-    border-radius: 10px;
-    padding: 10px 15px;
-    background-color: var(--cor-fundo);
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: var(--cor-fundo-secundaria);
     color: var(--cor-secundaria);
 }
 
@@ -172,32 +198,34 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100dvh;
+    height: 90dvh;
+
 }
 
 .contatos{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-evenly;
-    width: 80%;
+    gap: 40px;
 }
 
 .titulo-sm-rodape {
     gap: 20px;
-    margin-top: 80px;
+    align-self: flex-start;
+    margin-left: 20px;
 }
 
 .card-contatos {
     transition: transform 0.1s ease-in-out;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
 }
 
 .card-contatos > a > p {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .titulo-contato {
@@ -208,22 +236,20 @@
     color: var(--cor-texto);
 }
 
-.card-contatos:hover {
-    transform: scale(1.1);
-}
-
 .link-icon {
     background-color: var(--cor-fundo);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 
 .icon-contato {
     color: var(--cor-secundaria);
+    width: 30px;
+    height: 30px;
 }
 
 .info-rodape{

@@ -1,0 +1,167 @@
+@media screen and (min-width: 992px) {
+    /* Cabeçalho */
+    .titulo-cabecalho > div > h1 {
+        font-size: 90px;
+    }
+    
+    .titulo-cabecalho > div > h3 {
+        font-size: 40px;
+    }
+    
+    .bv-cabecalho {
+       font-size: 25px;
+    }
+    
+    .icon, .icon-contato {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Conteúdo */
+    .card {
+        flex-direction: column;
+    }
+    
+    .card-text-info > div > h3 {
+        font-size: 40px;
+    }
+    
+    .icon-card{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .card-tecnologias {
+        gap: 10px;
+    }
+    
+    .card-tecnologias > p {
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+
+
+    /* Rodapé */
+
+    .card-contatos > a > p {
+        font-size: 20px;
+    }
+
+    .link-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    /* Cabeçalho */
+	.cabecalho {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .titulo-cabecalho {
+        height: auto;
+        gap: 20px;
+        align-items: unset;
+    }
+    
+    .titulo-cabecalho > div > h1 {
+        font-size: 90px;
+    }
+    
+    .titulo-cabecalho > div > h3 {
+        font-size: 40px;
+        color: var(--cor-texto);
+    }
+    
+    .bv-cabecalho {
+       font-size: 25px;
+    }
+    
+    .icon, .icon-contato {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon:hover{
+        transform: scale(1.1);
+    }
+
+    .centro-cabecalho{
+        align-items: unset;
+    }
+    
+    .img-cabecalho > img {
+        display: block;
+    }
+
+    .img-cabecalho-mobile > img {
+        display: none;
+    }
+
+    /* Conteúdo */
+    .card {
+        flex-direction: row;
+        align-items: unset;
+        gap: 80px;
+        background-color: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+    .card > a > img {
+        width: 500px;
+    }
+    
+    .card > a > img:hover {
+        transform: scale(1.1);
+    }
+    
+    .card-text-info > div > h3 {
+        font-size: 20px;
+    }
+    
+    .icon-card{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .card-tecnologias {
+        gap: 10px;
+    }
+    
+    .card-tecnologias > p {
+        border-radius: 10px;
+        padding: 10px 15px;
+        background-color: var(--cor-fundo);
+    }
+
+
+    /* Rodapé */
+
+    .contatos{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 80%;
+    }
+
+    .card-contatos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-contatos > a > p {
+        font-size: 20px;
+    }
+
+    .card-contatos:hover {
+        transform: scale(1.1);
+    }
+
+    .link-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
