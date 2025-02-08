@@ -14,12 +14,13 @@ import projetoYF from "./assets/projetos/yf-studio.png";
 import projetoBurguer from "./assets/projetos/cardapio-burguer.png";
 import projetoMetas from "./assets/projetos/controle-metas.png";
 import { Button, DropdownMenu, Theme } from "@radix-ui/themes";
+import { motion } from "framer-motion";
 
 function App() {
   return (
     <>
       <header className="cabecalho">
-        <section
+        <motion.section
           variants={{
             hidden: { opacity: 0, y: 75 },
             visible: { opacity: 1, y: 0 },
@@ -56,8 +57,8 @@ function App() {
             </a>
             <Separador />
           </div>
-        </section>
-        <div 
+        </motion.section>
+        <motion.div 
         variants={{
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },
@@ -67,7 +68,7 @@ function App() {
         transition={{ duration: 0.5, delay: 0.25 }}
         className="img-cabecalho">
           <img src={ilustracao} alt="" />
-        </div>
+        </motion.div>
       </header>
       <main className="conteudo">
         <section className="sm-conteudo">
