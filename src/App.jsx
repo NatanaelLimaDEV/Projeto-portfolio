@@ -13,23 +13,24 @@ import ilustracao from "./assets/ilustracao-port-linhas.png";
 import projetoYF from "./assets/projetos/yf-studio.png";
 import projetoBurguer from "./assets/projetos/cardapio-burguer.png";
 import projetoMetas from "./assets/projetos/controle-metas.png";
+import sistemaChamados from "./assets/projetos/sistema-chamados.png"
+import filmeFlix from "./assets/projetos/filme-flix.png"
 import { Button, DropdownMenu, Theme } from "@radix-ui/themes";
 import { motion } from "framer-motion";
 
 function App() {
   return (
     <>
-      <header className="cabecalho">
-        <motion.section
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
+      <motion.header 
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
           }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="titulo-cabecalho"
-        >
+          viewport={{ once: false, amount: 0.5 }}
+          className="cabecalho">
+        <section className="titulo-cabecalho">
           <p className="bv-cabecalho">Olá! Seja bem-vindo ao meu portfólio!</p>
           <div className="centro-cabecalho">
             <div className="img-cabecalho-mobile">
@@ -57,26 +58,26 @@ function App() {
             </a>
             <Separador />
           </div>
-        </motion.section>
-        <motion.div 
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5, delay: 0.25 }}
-        className="img-cabecalho">
+        </section>
+        <div className="img-cabecalho">
           <img src={ilustracao} alt="" />
-        </motion.div>
-      </header>
+        </div>
+      </motion.header>
       <main className="conteudo">
         <section className="sm-conteudo">
           <div className="titulo-sm-conteudo">
             <Separador />
             <h1>Sobre mim</h1>
           </div>
-          <p className="text-conteudo">
+          <motion.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-conteudo">
             Sou um desenvolvedor full-stack em formação, dedicado à construção
             de aplicações web. Trabalho com JavaScript e TypeScript, utilizando
             React no frontend e Node.js no backend. Estou sempre buscando
@@ -84,14 +85,22 @@ function App() {
             Atualmente, estou em busca de uma oportunidade para contribuir com
             meu conhecimento e crescer profissionalmente na área de
             desenvolvimento.
-          </p>
+          </motion.p>
         </section>
         <section className="cards-conteudo">
           <div className="titulo-sm-conteudo">
             <Separador />
             <h1>Projetos</h1>
           </div>
-          <div className="card">
+          <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card">
             <a href="https://yf-studio.vercel.app/" target="_blank">
               <img src={projetoYF} alt="Projeto YF Studio" />
             </a>
@@ -157,8 +166,16 @@ function App() {
                 <p>Node.js</p>
               </div>
             </div>
-          </div>
-          <div className="card">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card">
             <a
               href="https://natanaellimadev.github.io/Cardapio-Burguer/"
               target="_blank"
@@ -201,8 +218,16 @@ function App() {
                 <p>CSS</p>
               </div>
             </div>
-          </div>
-          <div className="card">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card">
             <a href="https://controle-metas.vercel.app/" target="_blank">
               <img src={projetoMetas} alt="Projeto Controle de Metas" />
             </a>
@@ -270,7 +295,102 @@ function App() {
                 <p>Node.js</p>
               </div>
             </div>
-          </div>
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card">
+            <a href="https://sistemachamados-omega.vercel.app/" target="_blank">
+              <img src={sistemaChamados} alt="Projeto Sistema de Chamados" />
+            </a>
+            <div className="card-info">
+              <div className="card-text-info">
+                <div className="titulo-link-card">
+                  <h3>Projeto Sistema de Chamados</h3>
+                  <div className="link-card">
+                    <a
+                      href="https://github.com/NatanaelLimaDEV/Sistema-de-chamadas"
+                      target="_blank"
+                    >
+                      <LuGithub className="icon icon-card" />
+                    </a>
+                    <a
+                      href="https://sistemachamados-omega.vercel.app/"
+                      target="_blank"
+                    >
+                      <LuGlobe className="icon icon-card" />
+                    </a>
+                  </div>
+                </div>
+                <p>
+                  Projeto desenvolvido para auxiliar no acompanhamento e
+                  gerenciamento de chamados/serviços.
+                </p>
+                <p>
+                  Esta aplicação permite gerenciar clientes e chamados de forma clara e eficiente. Conta com formulários, opções para editar e conferir as informações detalhadas, uma tabela que lista de forma organizada os chamados/serviços e seus respectivos status,
+                  além de contar com um sistema de login, utilizando Firebase e a possibilidade de cadastrar novos usuários.
+                </p>
+              </div>
+              <div className="card-tecnologias">
+                <p>JavaScrip</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>React</p>
+                <p>Firebase</p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card">
+            <a href="https://filmeflix.vercel.app/" target="_blank">
+              <img src={filmeFlix} alt="Projeto Filme Flix" />
+            </a>
+            <div className="card-info">
+              <div className="card-text-info">
+                <div className="titulo-link-card">
+                  <h3>Projeto Filme Flix</h3>
+                  <div className="link-card">
+                    <a
+                      href="https://github.com/NatanaelLimaDEV/filme-flix"
+                      target="_blank"
+                    >
+                      <LuGithub className="icon icon-card" />
+                    </a>
+                    <a
+                      href="https://filmeflix.vercel.app/"
+                      target="_blank"
+                    >
+                      <LuGlobe className="icon icon-card" />
+                    </a>
+                  </div>
+                </div>
+                <p>
+                  Projeto que lista filmes em cartaz
+                </p>
+                <p>
+                  Esta aplicação simples, lista os filmes atuais e conta com um página de favoritos. Todos os dados são salvos no Local Storage e os filmes são buscados em <a style={{ color: "#2d5c7e", fontWeight: 600 }} href="https://www.themoviedb.org/" target="_blank">The Movie Database</a>.
+                </p>
+              </div>
+              <div className="card-tecnologias">
+                <p>JavaScrip</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>React</p>
+              </div>
+            </div>
+          </motion.div>
         </section>
       </main>
       <footer className="rodape">
@@ -279,7 +399,12 @@ function App() {
           <h1>Contatos</h1>
         </div>
         <section className="contatos">
-          <div className="card-contatos">
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0], transition: { duration: 0.5, ease: "easeInOut" } }}
+          whileHover={{ scale: 1.1, transition:{ duration: 0.3, ease: "easeInOut" } }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card-contatos">
             <a href="mailto:natanaellimaofc@gmail.com" target="_blank">
               <div className="link-icon">
                 <AiOutlineMail className="icon-contato" />
@@ -289,8 +414,13 @@ function App() {
               <p className="titulo-contato">E-mail</p>
               <p className="sec-contato">natanaellimaofc@gmail.com</p>
             </a>
-          </div>
-          <div className="card-contatos">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0], transition: { duration: 0.5, ease: "easeInOut" } }}
+          whileHover={{ scale: 1.1, transition:{ duration: 0.3, ease: "easeInOut" } }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card-contatos">
             <a
               href="https://api.whatsapp.com/send?phone=5588997458919"
               target="_blank"
@@ -306,8 +436,13 @@ function App() {
               <p className="titulo-contato">WhatsApp</p>
               <p className="sec-contato">(88) 99745-8919</p>
             </a>
-          </div>
-          <div className="card-contatos">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0], transition: { duration: 0.5, ease: "easeInOut" } }}
+          whileHover={{ scale: 1.1, transition:{ duration: 0.3, ease: "easeInOut" } }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card-contatos">
             <a
               href="https://www.linkedin.com/in/natanael-lima-a37353318/"
               target="_blank"
@@ -323,8 +458,13 @@ function App() {
               <p className="titulo-contato">LinkedIn</p>
               <p className="sec-contato">@natanaellima</p>
             </a>
-          </div>
-          <div className="card-contatos">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0], transition: { duration: 0.5, ease: "easeInOut" } }}
+          whileHover={{ scale: 1.1, transition:{ duration: 0.3, ease: "easeInOut" } }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="card-contatos">
             <a href="https://github.com/NatanaelLimaDEV" target="_blank">
               <div className="link-icon">
                 <LuGithub className="icon-contato" />
@@ -334,7 +474,7 @@ function App() {
               <p className="titulo-contato">Github</p>
               <p className="sec-contato">@natanaellima</p>
             </a>
-          </div>
+          </motion.div>
         </section>
         <section className="info-rodape">
           <span>

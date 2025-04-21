@@ -102,6 +102,10 @@
     }
 
     /* Conteúdo */
+    .conteudo {
+        margin-top: 0;
+    }
+    
     .card {
         flex-direction: row;
         align-items: unset;
@@ -154,10 +158,6 @@
 
     .card-contatos > a > p {
         font-size: 20px;
-    }
-
-    .card-contatos:hover {
-        transform: scale(1.1);
     }
 
     .link-icon {
